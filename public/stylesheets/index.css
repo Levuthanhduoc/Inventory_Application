@@ -1,0 +1,22 @@
+.linkBox{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.linkBox>a{
+    text-decoration: none;
+    color: inherit;
+}
+.linkBox>a>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    height: 100px;
+    width: 100px;
+}
+
+.linkBox>a>div:hover{
+    opacity: 0.5;
+}

@@ -1,0 +1,16 @@
+extends layout 
+
+block content
+    h1=meat.name
+    p description: #{meat.description}
+    p Location : #{meat.store.name} 
+    p Price: #{meat.price}/kg 
+    p Size(gram): 
+        each Size in meat.size
+           | #{Size} 
+    p=meat.status
+    if meat.status == "Available"
+        form(action="/")
+            button Add to cart
+
+    

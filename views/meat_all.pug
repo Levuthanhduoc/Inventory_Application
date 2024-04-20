@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    if meat
+        each item in meat 
+            a(href=item.url)=item.name
+            br
+    else 
+        div there is no item in this category

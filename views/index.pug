@@ -1,0 +1,27 @@
+extends layout
+
+block css 
+  link(rel="stylesheet", href="/stylesheets/index.css")
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div.login 
+    button(type="button" onclick=`${onclick}`) LOGIN
+    form(action="/catalog/login" method="post" style="opacity:0")
+        p name
+            input(type="text" value="" name="name")
+        p password 
+            input(type="text" value ="" name="password")
+        input(type="submit" value = "login")
+        p Don't have account? 
+          a(href="/catalog/signup") Sign Up
+
+  div.linkBox
+    each meat in type 
+      a(href=meat.url)
+        div=meat.name 
+    
+    
+  
+

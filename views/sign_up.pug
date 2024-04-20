@@ -1,0 +1,17 @@
+extends layout 
+block js 
+    script(src="/javascripts/sign_up_check.js")
+block content
+    p=title
+    if message
+        each val in message
+            p(class="err-message" style={color: 'red'})=val.msg
+    p(class="err-message" style={color: 'red'})=""
+    form(class="sign-up-form" action="signup" method="post")
+        p Name
+            input(class="in-name" type="text" value=name name="name")
+        p Password 
+            input(class="in-pass" type="password" value =password name="password")
+        p Confirm password
+            input(class="in-repass" type="password" value ="" name="rePassword")
+        input(class="out-sign-up" type="submit" value = "login")

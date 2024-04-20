@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    p=title
+    p=message
+    form(action="/catalog/login" method="post")
+        p name
+            input(class="in_name" type="text" value="" name="name")
+        p password 
+            input(class="in_pass" type="text" value ="" name="password")
+        input(type="submit" value = "login")
+        p Don't have account? 
+          a(href="/catalog/signup") Sign Up
+        
